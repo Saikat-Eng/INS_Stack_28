@@ -1,0 +1,29 @@
+/*
+ * File: AsyncMARGGPSFuserBase.h
+ *
+ * MATLAB Coder version            : 4.2
+ * C/C++ source code generated on  : 14-Jun-2023 18:12:47
+ */
+
+#ifndef ASYNCMARGGPSFUSERBASE_H
+#define ASYNCMARGGPSFUSERBASE_H
+
+/* Include Files */
+
+#include "INSEstimator.h"
+#include "math.h"
+
+/* Function Declarations */
+extern void INS_Filt_fuseaccel(insfilterAsync *obj, const float *accel);
+extern void INS_Filt_fusegyro(insfilterAsync *obj, const float *gyro);
+extern void INS_Filt_fusemag(insfilterAsync *obj, float *mag);
+extern void INS_Filt_fusegps(insfilterAsync *obj, const double *lla, const float *vel);
+extern void INS_Filt_predict(insfilterAsync *obj, const float dt);
+extern char accel_ok_for_fusion(const float *accel, const float *gyro);
+#endif
+
+/*
+ * File trailer for AsyncMARGGPSFuserBase.h
+ *
+ * [EOF]
+ */
